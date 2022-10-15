@@ -29,6 +29,4 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('/redirect', [HomeController::class,'redirect
-
-use App']);
+Route::get('/redirect', [HomeController::class,'redirect']);
