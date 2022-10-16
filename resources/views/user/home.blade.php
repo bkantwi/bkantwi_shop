@@ -64,6 +64,20 @@ https://templatemo.com/tm-546-sixteen-clothing
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact Us</a>
               </li>
+
+              <li class="nav-link">
+                @if (Route::has('login'))
+                        @auth
+                            <li><a class="nav-link" href="{{ url('/dashboard') }}">Dashboard</a></li>
+                        @else
+                            <li><a class="nav-link" href="{{ route('login') }}">Log in</a></li>
+
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}" class="nav-link">Register</a>
+                            @endif
+                        @endauth
+                @endif
+                </li>
             </ul>
           </div>
         </div>
