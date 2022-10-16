@@ -68,7 +68,9 @@ https://templatemo.com/tm-546-sixteen-clothing
               <li class="nav-link">
                 @if (Route::has('login'))
                         @auth
-                            <li><a class="nav-link" href="{{ url('/dashboard') }}">Dashboard</a></li>
+                            {{-- <li><a href="{{ url('/dashboard') }}">Dashboard</a></li> --}}
+
+                        <x-app-layout></x-app-layout>
                         @else
                             <li><a class="nav-link" href="{{ route('login') }}">Log in</a></li>
 
